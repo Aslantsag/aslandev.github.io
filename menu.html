@@ -1,0 +1,149 @@
+<div id="menu">
+	<h3 class="menu-title">Меню</h3>
+	<ul class="menu-list level_1">
+		<li>
+			<a href="#">Microsoft Windows</a>
+			<ul class="menu-list level_2">
+				<li><a href="#">Windows 11</a></li>
+				<li><a href="#">Windows 10</a></li>
+				<li><a href="#">Windows 8</a></li>
+				<li><a href="#">Windows 7</a></li>
+				<li><a href="#">Windows Server</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">Microsoft Office</a>
+			<ul class="menu-list level_2">
+				<li><a href="#">Office 2021</a></li>
+				<li><a href="#">Office 2019</a></li>
+				<li><a href="#">Office 2016</a></li>
+				<li><a href="#">Office 2013</a></li>
+				<li><a href="#">Office 2010</a></li>
+				<li><a href="#">Office 365</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">Антивирусы</a>
+			<ul class="menu-list level_2">
+				<li><a href="#">Windows 11</a></li>
+				<li><a href="#">Windows 10</a></li>
+				<li><a href="#">Windows 8</a></li>
+				<li><a href="#">Windows 7</a></li>
+				<li><a href="#">Windows Server</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">Другие вендоры</a>
+			<ul class="menu-list level_2">
+				<li><a href="#">Windows 11</a></li>
+				<li><a href="#">Windows 10</a></li>
+				<li><a href="#">Windows 8</a></li>
+				<li><a href="#">Windows 7</a></li>
+				<li><a href="#">Windows Server</a></li>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+<style>
+	body {
+		background: #eee;
+	}
+	#menu {
+		font-family: arial;
+		width: 234px;
+		margin: 100px auto;
+	}
+	.menu-title {
+		color: #033b56;
+		height: 50px;
+		line-height: 50px;
+		margin-bottom: 0;
+		text-transform: uppercase;
+		font-weight: bold;
+		padding-left: 87px;
+		background: #f5f5f6;
+	}
+	.menu-list {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		background: #fff;
+	}
+	.menu-list.level_2 {
+		position: absolute;
+		top: 0;
+		right: -234px;
+		/*z-index: -1;*/
+		opacity: 0;
+		width: 100%;
+		border: 1px solid #f5f5f6;
+		transition: opacity 0.2s;
+	}
+	.menu-list li {
+		position: relative;
+	}
+	.menu-list a {
+		display: block;
+		color: #033b56;
+		font-size: 16px;
+		height: 50px;
+		line-height: 50px;
+		padding-left: 60px;
+		text-decoration: none;
+	}
+	.menu-list li:hover > a {
+		color: #fff;
+		background: #033b56;
+	}
+	.menu-list li:hover .menu-list.level_2 {
+		opacity: 1;
+	}
+	.menu-list.level_1 > li > a::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 16px;
+		z-index: 1;
+		width: 10px;
+		height: 100%;
+		background-size: 5px;
+		background-position-y: center;
+		background-repeat: no-repeat;
+		background-image: url('arrow.png');
+
+	}
+	.menu-list.level_1 > li > a:hover::before {
+		background-image: url('arrow-h.png');
+	}
+	.menu-list.level_1 li a {
+		position: relative;
+		background-size: 34px;
+		background-position: 8px 8px;
+		background-repeat: no-repeat;
+		border: 0.5px solid #f5f5f6;
+	}
+	.menu-list.level_1 li:nth-child(1) a,
+	.menu-list.level_1 li:nth-child(1) li a {
+		background-image: url('1.png');
+	}
+	.menu-list.level_1 > li:nth-child(2) > a,
+	.menu-list.level_1 li:nth-child(2) li a {
+		background-image: url('2.png');
+	}
+	.menu-list.level_1 > li:nth-child(3) > a,
+	.menu-list.level_1 li:nth-child(3) li a {
+		background-image: url('3.png');
+	}
+	.menu-list.level_1 > li:nth-child(4) > a,
+	.menu-list.level_1 li:nth-child(4) li a {
+		background-image: url('4.png');
+	}
+	.menu-list.level_2 li a {
+		height: 40xp;
+		line-height: 40xp;
+		background-position: 7px 7px;
+		background-size: 26px;
+		border: none;
+	}
+</style>
