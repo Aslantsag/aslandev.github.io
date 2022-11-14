@@ -44,8 +44,7 @@
 		</li>
 	</ul>
 </div>
-
-<style>
+<style type="text/css">
 	body {
 		background: #eee;
 	}
@@ -59,10 +58,13 @@
 		height: 50px;
 		line-height: 50px;
 		margin-bottom: 0;
-		text-transform: uppercase;
 		font-weight: bold;
 		padding-left: 87px;
-		background: #f5f5f6;
+		background-color: #f5f5f6;
+		background-image: url('https://static.tildacdn.com/tild6362-3262-4965-b465-656134363365/_-8__.png');
+		background-size: 40px;
+		background-repeat: no-repeat;
+		background-position: 8px center;
 	}
 	.menu-list {
 		padding: 0;
@@ -72,9 +74,9 @@
 	}
 	.menu-list.level_2 {
 		position: absolute;
-		top: 0;
+		top: -1000px;
 		right: -234px;
-		/*z-index: -1;*/
+		z-index: 1;
 		opacity: 0;
 		width: 100%;
 		border: 1px solid #f5f5f6;
@@ -97,6 +99,7 @@
 		background: #033b56;
 	}
 	.menu-list li:hover .menu-list.level_2 {
+		top: 0;
 		opacity: 1;
 	}
 	.menu-list.level_1 > li > a::before {
